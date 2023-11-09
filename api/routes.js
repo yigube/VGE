@@ -6,9 +6,11 @@ const GradoController = require("./controllers/GradoController.js");
 const CandidatosController = require("./controllers/CandidatoController.js");
 const AlumnoController = require("./controllers/AlumnoController.js");
 const TarjetonController = require("./controllers/TarjetonController.js");
+const AuthController = require("./controllers/AuthController.js");
 
-//Home
-router.get("/", (req, res) => res.json({ foo: "Bar" }));
+//Login y registro
+router.post("/singin",AuthController.singIn);
+router.post("/singup",AuthController.singUp);
 
 //Alumno
 router.get("/grados", GradoController.all);
