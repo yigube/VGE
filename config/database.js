@@ -14,11 +14,11 @@ module.exports = {
     //underscored: true,
   },
 
-   //Configuración de los Seeders
+  //Configuración de los Seeders
   seederStorage: "sequelize",
-  seederStorageTableName:"seeds",
+  seederStorageTableName: "seeds",
 
   //Configuración de las migraciones
   migrationStorage: "sequelize",
-  migrationStorageTableName:"migrations" 
+  migrationStorageTableName: "migrations",
 };
