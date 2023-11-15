@@ -9,13 +9,16 @@ const TarjetonController = require("./controllers/TarjetonController.js");
 const AuthController = require("./controllers/AuthController.js");
 
 //Login y registro
-router.post("/singin", AuthController.singIn);
-router.post("/singup", AuthController.singUp);
+router.post("/signin", AuthController.signIn);
+router.post("/signup", AuthController.signUp);
 
-//Alumno
+//Rutas para grados
 router.get("/grados", GradoController.getAllGrado);
+//Rutas para candidatos
 router.get("/candidatos", CandidatosController.getAllCandidato);
+//Rutas para alumnos
 router.get("/alumnos", AlumnoController.getAllAlumno);
+//Rutas para tarjetones
 router.get("/tarjeta", TarjetonController.getAllTarjeton);
 
 module.exports = router;

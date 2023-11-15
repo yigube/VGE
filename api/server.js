@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // Para poder rellenar el req.body
 app
   .use(express.json())
-  .use(express.urlencoded({ extended: false }))
+  .use(express.urlencoded({ extended: true }))
 
   // Rutas
   .use(require("./routes"))
@@ -18,7 +18,7 @@ app
   .listen(PORT, function () {
     console.log(`La api ha arrancando en http://localhost:${PORT}`);
 
-    sequelize.sync({ force: true }).then(() => {
+    sequelize.sync({ force: false }).then(() => {
       console.log("Se ha establecido la conexión");
     });
   });
